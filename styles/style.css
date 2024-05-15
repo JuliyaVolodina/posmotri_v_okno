@@ -36,3 +36,240 @@ ul,
 ol {
   list-style: none;
 }
+
+input:focus, 
+input:focus-visible, 
+a:focus-visible {
+  outline: none;
+ }
+
+.content {
+  display: grid;
+  grid-template-columns: 711px 399px;
+  margin-block: 133px 133px;
+  margin-inline: 30px;
+  column-gap: 30px;
+}
+
+.result {
+  padding-block-start: 78px;
+}
+
+.result__video-container {
+  block-size: 386px;
+  position: relative;
+}
+
+.result__video {
+  inline-size: 100%;
+  block-size: 100%;
+  object-fit: cover;
+}
+
+.search-form {
+  display: grid;
+  gap: 40px;
+  grid-template-columns: 225px 212px 194px;
+  margin-block-start: 20px;
+  align-items: end;
+}
+
+.search-form__fieldset {
+  line-height: 21.6px;
+  border: none;
+  height: 100%;
+}
+
+.search-form__fieldset-title {
+  font-size: inherit;
+  font-weight: normal;
+}
+
+.search-form__label {
+  display: flex;
+  border: 1px solid transparent;
+}
+
+.search-form__label:has(:focus-visible) {
+  border: 1px solid #fff;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;                   
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+}
+
+.search-form__textfield {
+  background-color: inherit;
+  width: 100%;
+  border: none;
+  border-block: solid 1px rgba(255, 255, 255, 1);
+  border-inline: solid 1px transparent;
+  font-family: 'Fira Sans Condensed', sans-serif;
+  font-size: 18px;
+  appearance: none;
+  margin-block: 1px;
+}
+
+.search-form__textfield:active {
+  border: 1px solid rgba(255, 255, 255, 1);
+}
+
+.search-form__checkbox-list {
+  display: flex;
+  gap: 15px;
+  align-items: end;
+  height: 27px;
+}
+
+.search-form__pseudo-checkbox {
+  display: block;
+  height: 19px;
+  width: 19px;
+  border: solid 1px #fff;
+  cursor: pointer;
+  appearance: none;
+  position: relative;
+  z-index: 1;
+}
+
+.search-form__pseudo-checkbox:active:before {
+  content: '';
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  border: 1px solid #000;
+  background-color: rgba(255, 255, 255, 1);
+  position: absolute;
+  inset: 1px 0 0 1px;
+}
+
+.search-form__label-text {
+  padding-inline-start: 2px;
+}
+
+.search-form__label:hover .search-form__label-text {
+  text-decoration: underline solid 1px;
+}
+
+.button {
+  block-size: 34px;
+  font-family: 'Fira Sans Condensed', sans-serif;
+  font-weight: 700;
+  background-color: inherit;
+  font-size: 18px;
+  border: none;
+  border: solid 1px #fff;
+  color: #fff;
+  line-height: 21.6px;
+  cursor: pointer;
+}
+
+.search-form__submit-button{
+  position: relative;
+ }
+
+ .search-form__submit-button::after{
+  content: '';
+  display: block;
+  position: absolute;
+  inset: 1px;
+  border: 1px solid transparent;
+ }
+
+ .search-form__submit-button:focus:after{
+  border-color:#fff
+ }
+
+.search-form__submit-button:active {
+  background: rgba(84, 80, 80, 1);
+}
+
+.title {
+  font-family: 'Oswald', sans-serif;
+  font-size: 75px;
+  font-weight: 700;
+  line-height: 70.5px;
+  text-transform: uppercase;
+  margin-block-end: 25px;
+  user-select: none;
+}
+
+.content__accent {
+  color: rgba(255, 255, 255, 0.2);
+}
+
+.content__list {
+  block-size: 298px;
+  overflow: auto;
+  position: relative;
+}
+
+.content__list-item {
+  block-size: 107px;
+}
+
+.content__list-item:not(:last-child) {
+  margin-block-end: 29px;
+}
+
+.content__card-link {
+  text-decoration: none;
+}
+
+.content__card-link_current {
+  border: solid 1px #fff;
+  height: 100%;
+  display: block;
+  margin-inline: 3px;
+}
+
+a:focus-visible  {
+  border: solid 1px #fff;
+  display: block;
+}
+
+.content__video-card {
+  display: flex;
+}
+
+.content__video-card-description-container {
+  width: 100%;
+  color: #fff;
+  padding-inline-end: 5px;
+}
+
+.content__video-card-description-container:active {
+  background: rgba(84, 80, 80, 1);
+}
+
+.content__video-card-title {
+  text-transform: uppercase;
+  font-size: 30px;
+  line-height: 30px;
+  font-weight: 700;
+  font-family: 'Oswald', sans-serif;
+  padding-block-start: 6px;
+}
+
+.content__video-card-description {
+  line-height: 16.2px;
+  padding-block-start: 5px;
+}
+
+.content__video-card-thumbnail {
+  min-inline-size: 173px;
+  block-size: 103px;
+}
+
+.more-button {
+  width: 100%;
+  padding-block-start: 5px;
+  padding-inline-start: 20px;
+}
