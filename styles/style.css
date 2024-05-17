@@ -16,7 +16,10 @@ html {
   font-family: 'Fira Sans Condensed', sans-serif;
   font-size: 18px;
   background-color: #1b1919;
-  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow-y: auto;
 }
 
 h1,
@@ -39,9 +42,8 @@ ol {
 }
 
 input:focus, 
-input:focus-visible, 
 a:focus,
-a:focus-visible {
+button {
   outline: none;
 }
 
@@ -176,15 +178,12 @@ a {
   color: #fff;
   line-height: 21.6px;
   cursor: pointer;
+  position: relative;
 }
 
 .button:hover {
   text-decoration: underline solid 1px;
 }
-
-.button {
-  position: relative;
- }
 
  .button::after{
   content: '';
@@ -194,7 +193,7 @@ a {
   border: 1px solid transparent;
  }
 
- .button:focus-visible:after {
+ .button:focus-visible::after {
   border-color:#fff;
  }
 
@@ -235,17 +234,20 @@ a {
   display: block;
 }
 
+.content__card-link:active {
+  background: rgba(84, 80, 80, 1);
+}
+
+.content__card-link:focus-visible  {
+  border: solid 1px #fff;
+}
+
 .content__card-link:hover {
   text-decoration: underline solid 1px #fff;
 }
 
 .content__card-link_current {
   background: rgba(84, 80, 80, 1);
-}
-
-.content__card-link_current:focus-visible  {
-  border: solid 1px #fff;
-  background-color: #1b1919;
 }
 
 .content__video-card {
