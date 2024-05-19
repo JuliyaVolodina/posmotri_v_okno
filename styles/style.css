@@ -47,10 +47,6 @@ button {
   outline: none;
 }
 
-.button {
-  border: none;
-}
-
 a {
   text-decoration: none;
 }
@@ -149,6 +145,7 @@ a {
   position: relative;
   z-index: 1;
 }
+
 .search-form__checkbox:checked + .search-form__pseudo-checkbox::before {
   content: '';
   display: inline-block;
